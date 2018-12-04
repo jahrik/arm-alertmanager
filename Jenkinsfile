@@ -35,3 +35,25 @@ for (x in labels) {
 }
 
 parallel builders
+
+node('master') {
+
+    try {
+
+        stage('scm') {
+            deleteDir()
+            checkout scm
+        }
+
+        stage('deploy') {
+            sh "make deploy"
+        }
+
+    } catch(error) {
+        throw error
+
+    } finally {
+        // Any cleanup operations needed, whether we hit an error or not
+
+    }
+}
