@@ -1,4 +1,4 @@
-FROM arm32v7/golang
+FROM arm32v7/golang:1.11-stretch
 
 RUN git clone https://github.com/prometheus/alertmanager.git
 RUN cd alertmanager && \
