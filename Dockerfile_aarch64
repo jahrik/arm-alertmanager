@@ -3,7 +3,7 @@ FROM arm64v8/golang
 RUN git clone https://github.com/prometheus/alertmanager.git
 RUN cd alertmanager && \
   make build && \
-  cp alertmanager /go/bin/alertmanager
+  cp alertmanager /bin/alertmanager
 
 RUN mkdir /etc/alertmanager
 COPY config.yml /etc/alertmanager.config.yml
