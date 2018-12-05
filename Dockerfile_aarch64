@@ -6,7 +6,7 @@ RUN cd alertmanager && \
   cp alertmanager /bin/alertmanager
 
 RUN mkdir /etc/alertmanager
-COPY config.yml /etc/alertmanager.config.yml
+COPY config.yml /etc/alertmanager/config.yml
 
 RUN mkdir /alertmanager
 VOLUME [ "/alertmanager" ]
