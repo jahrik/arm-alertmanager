@@ -12,5 +12,5 @@ RUN mkdir /alertmanager
 VOLUME [ "/alertmanager" ]
 
 EXPOSE 9093
-ENTRYPOINT ["/bin/alertmanager"]
-CMD ["--config.file=/etc/alertmanager/config.yml", "--storage.path=/alertmanager"]
+ENTRYPOINT [ "/bin/alertmanager" ]
+CMD [ "--config.file=/etc/alertmanager/config.yml", "--storage.path=/alertmanager" ]

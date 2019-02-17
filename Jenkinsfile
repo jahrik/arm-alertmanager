@@ -12,23 +12,20 @@ for (x in labels) {
       try {
 
         stage('build') {
-          deleteDir()
-          checkout scm
-          sh "make"
-        }
-
-        stage('test') {
+            deleteDir()
+            checkout scm
+            sh "make"
         }
 
         stage('push') {
-          sh "make push"
+            sh "make push"
         }
 
       } catch(error) {
-        throw error
+          throw error
 
       } finally {
-        // Any cleanup operations needed, whether we hit an error or not
+          deleteDir()
       }
     }
   }
@@ -53,7 +50,6 @@ node('master') {
         throw error
 
     } finally {
-        // Any cleanup operations needed, whether we hit an error or not
-
+        deleteDir()
     }
 }
