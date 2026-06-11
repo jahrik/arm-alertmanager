@@ -1,11 +1,12 @@
+.EXPORT_ALL_VARIABLES:
 IMAGE = "jahrik/arm-alertmanager"
-TAG := $(shell uname -m)
+TAG = latest
 STACK = "monitor"
 
 all: build
 
 build:
-	@docker build -t ${IMAGE}:$(TAG) -f Dockerfile_${TAG} .
+	@docker build -t ${IMAGE}:$(TAG) .
 
 push:
 	@docker push ${IMAGE}:$(TAG)
