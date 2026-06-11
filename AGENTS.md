@@ -19,4 +19,3 @@ make deploy                                 # swarm stack deploy (stack: monitor
 - Bump Alertmanager via the `FROM` tag (github.com/prometheus/alertmanager/releases).
 - `config.yml` is the upstream example config (example.org, placeholder keys) — a template, not live config.
 - `docker-compose.yml` is a swarm fragment: external `monitor` overlay network, `/mnt/g1/alertmanager` volume (GlusterFS mount on the original cluster) — keep that wiring.
-- Local `docker` is a Podman shim; fully qualify image refs.
