@@ -12,7 +12,7 @@ make deploy                                 # swarm stack deploy (stack: monitor
 
 ## CI
 
-`build.yml`: Test (build + `/-/healthy`) on PR; Release (buildx amd64+arm64 push to Docker Hub) on merge to main. Needs `DOCKERHUB_USERNAME`/`DOCKERHUB_TOKEN` secrets.
+`build.yml`: Test (build + `/-/healthy`) on PR; Release (buildx amd64+arm64+armv7 push to Docker Hub) on merge to main. Needs `DOCKERHUB_USERNAME`/`DOCKERHUB_TOKEN` secrets.
 
 ## Quirks
 
