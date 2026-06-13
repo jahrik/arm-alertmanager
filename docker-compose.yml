@@ -1,19 +1,13 @@
-version: '3.5'
-
+---
 services:
-
   alertmanager:
-    image: jahrik/arm-alertmanager:aarch64
+    image: jahrik/arm-alertmanager:latest
     ports:
-      - 9093:9093
+      - "9093:9093"
     volumes:
       - /mnt/g1/alertmanager:/alertmanager
     networks:
       - monitor
-    deploy:
-      placement:
-        constraints:
-          - node.labels.arch == aarch64
 
 networks:
   monitor:
