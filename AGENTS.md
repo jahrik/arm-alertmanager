@@ -5,9 +5,9 @@ Multi-arch Alertmanager image: pinned `FROM` over official `prom/alertmanager` p
 ## Commands
 
 ```bash
-make build                                  # build jahrik/arm-alertmanager:latest
+just build                                  # build jahrik/arm-alertmanager:latest
 curl -fsS http://localhost:9093/-/healthy   # smoke test a running container
-make deploy                                 # swarm stack deploy (stack: monitor)
+just deploy                                 # swarm stack deploy (stack: monitor)
 ```
 
 ## CI
