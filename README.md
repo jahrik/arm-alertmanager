@@ -17,14 +17,14 @@ Config lives at `/etc/alertmanager/config.yml` — edit `config.yml` and rebuild
 
 ```bash
 docker network create -d overlay monitor   # once
-make deploy                                # data persists to /mnt/g1/alertmanager
+just deploy                                # data persists to /mnt/g1/alertmanager
 ```
 
 ## Build
 
 ```bash
-make build
-make push
+just build
+just push
 ```
 
 CI: PR builds + health check; merge to main pushes multi-arch (amd64/arm64/armv7) to Docker Hub.
